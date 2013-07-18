@@ -1,12 +1,13 @@
-##It's all about style, right?
+#Explaining Sass
+#####It's all about style, right?
 How do we get the code that we spend all this time strategizing, fussing, tweaking, testing, iterating, building to look good? Bootstrap? Foundation? Divshot? 
 
 We all want the code we write to look good…fast! and we want it to be easy to write. _Enter Sass_.
 
 
 ##What is it?
-####S.A.SS = Syntactically Awesome StyleSheets
-####SCSS = Sassy CSS (the newer syntax that you will see most often)
+#####S.A.SS = Syntactically Awesome StyleSheets
+#####SCSS = Sassy CSS (the newer syntax that you will see most often)
 
 Just like the website says SCSS "is a superset of CSS3's syntax…every valid CSS3 stylesheet is valid SCSS as well." SASS is older, and inspired by HAML meaning it follows an indentation specificity (like Jade or Slim for producing markup). Since I have been writing in the CSS syntax I feel most comfortable with writing SCSS instead of SASS, but feel free to experiment. Whatever the case, their both referred to as Sass. 
 
@@ -19,13 +20,15 @@ http://thesassway.com/
 - Great for rapid prototyping
 
 ## How do we get it running?
-install it using the ruby gem
+Install it using the ruby gem…
 
 _SASS_: 
           
 		$gem install sass
 		
+		
 		navigate to your project folder
+		
 
 		$scss --watch file_name.css:file_name.css
 		
@@ -37,9 +40,12 @@ _COMPASS_:
   
 		$sudo gem install compass
 		
+		
 		navigate to your project folder
+		
 
 		$compass create sass_folder_name
+		
 		
 		$compass watch sass_folder_name
 
