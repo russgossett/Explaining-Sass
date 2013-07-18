@@ -25,7 +25,7 @@ _SASS_:
           
 		$gem install sass
 		navigate to your project folder
-		$scss --watch file_name.css:file_name.css
+		$scss --watch file_name.scss:file_name.css
 		
 this also works
 
