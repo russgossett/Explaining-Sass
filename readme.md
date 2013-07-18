@@ -25,17 +25,17 @@ install it using the ruby gem
 _SASS_: 
           
 		$gem install sass
-- navigate to your project folder
+navigate to your project folder
 
 		$scss --watch file_name.css:file_name.css
--or
+or
 
 		$sass --watch scss_folder:css_folder
 
 _COMPASS_:  
   
 		$sudo gem install compass
-- navigate to your project folder
+navigate to your project folder
 
 		$compass create sass_folder_name
 		$compass watch sass_folder_name
@@ -50,9 +50,13 @@ _STRUCTURE:_
 		
 _EXAMPLE:_
 
-		$bluelight: lightblue;
-		$margin: 5px;
+		$app-blue: #06C;
+		$app-red: darkred;
+		$app-gray: rgba(0,0,0,.75);
 		
+		color: $app-red;
+		
+		$margin: 5px;
 		h1 {$margin - 5px}
 
 
@@ -63,7 +67,7 @@ _STRUCTURE:_
 		     child_selector {}
 		}
 
-_CSS3:_
+_EXAMPLE (CSS3):_
 
 		.container {}
 		    .container header {}
@@ -72,7 +76,7 @@ _CSS3:_
 		               .container header ul li a {}
 		                    .container header ul li a:hover {}
 
-_SCSS:_
+_EXAMPLE (SCSS):_
 
 		.container {
 		     header {
@@ -96,7 +100,7 @@ _STRUCTURE:_
     
 Let's create a mixing for those unruly vendor pre-fixes and border radius.
 
-_APPLICATION:_
+_EXAMPLE:_
 
     @mixin border-radius($radius: 20px) {
 	    -webkit-border-radius: $radius;
@@ -112,21 +116,40 @@ _APPLICATION:_
 		}
 
 ##What more could I learn and where?
-###Using Compass
-Compass comes install with mixins which you can read all about on their fantastically documented website. I use it as a constant reference guide.
-
 ###What is Compass?
-Compass is the first Sass-based framework. Compass is like using Javascript without using jQuery. Just like when you were learning jQuery and you'd refer to the documentation to see if they had an easy way to prepend. And then you go to the site and document is painfully obvious. See jquery api: Prepend. Compass is the exact same. If you're looking for a way to generate typographic hierarchy without loading the entire Tiwtter Bootstrap (I'm not looking at anyone in particular; Teddy!)
+Compass is the first Sass-based framework. Compass is like using Javascript without using jQuery. Just like when you were learning jQuery and you'd refer to the documentation to see if they had an easy way to prepend. And then you go to the site and document is painfully obvious. See jquery api: Prepend. Compass is the exact same. If you're looking for a way to generate typographic hierarchy without loading the entire Twitter Bootstrap (I'm not looking at anyone in particular; Teddy!)
+
+You can read all about Compass on their fantastically documented website
 
 http://compass-style.org/
 
 
 ###Using conditionals (@if and @else)
 
-		$break-small: 320px;$break-large: 1024px;@mixin respond-to($media) {  @if $media == handhelds {    @media only screen and (max-width: $break-small) { @content; }  
-		}  
+		$break-small: 320px;
+		$break-large: 1024px;
+		
+		@mixin respond-to($media) { 
+		 
+			@if $media == handhelds {
+				@media only screen and (max-width: $break-small) { @content; }  
+		  }  
 
-		@else if $media == medium-screens {    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }  }  @else if $media == wide-screens {    @media only screen and (min-width: $break-large) { @content; }  }}.profile-pic {  float: left;  width: 250px;  @include respond-to(handhelds) { width: 100% ;}  @include respond-to(medium-screens) { width: 125px; }  @include respond-to(wide-screens) { float: none; }} 
+			@else if $media == medium-screens {    
+				@media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }  
+			}  
+			@else if $media == wide-screens {    
+				@media only screen and (min-width: $break-large) { @content; }  
+			}
+		}
+		
+		img.profile {  
+			float: left;  
+			width: 250px;  
+			@include respond-to(handhelds) { width: 100% ;}  
+			@include respond-to(medium-screens) { width: 125px; } 
+			@include respond-to(wide-screens) { float: none; }
+		} 
 
 ###Check out these helpful tutorials (video):
 http://www.youtube.com/watch?v=fbVD32w1oTo
