@@ -163,32 +163,25 @@ textarea {
     page-break-after: avoid; } }
 /* VARIABLES */
 /* MIXINS */
-/*
-@mixin border-radius($radius: 20px) {
--webkit-border-radius: $radius;
--moz-border-radius: $radius;
--ms-border-radius: $radius;
-border-radius: $radius;
-}
-*/
-/* THE REST IS UP TO YOU */
-/*.container {
-	width:100%;
-	margin:0px auto;
-	@media screen and (min-width: 600px) {
-	    width:60%;
-	    font-size:120%;
-	}
-}
-*/
-/*
 input[type=button] {
-	@include border-radius;
-	&:hover{background:$blue-light;}
-}
-*/
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  border-radius: 40px; }
+  input[type=button]:hover {
+    background: red; }
+
+/* THE REST IS UP TO YOU */
+.container {
+  width: 100%;
+  margin: 0px auto; }
+  @media screen and (min-width: 600px) {
+    .container {
+      width: 60%;
+      font-size: 120%; } }
+
 h1 {
-  color: lightblue; }
+  color: red; }
 
 /*
 $break-small: 600px;

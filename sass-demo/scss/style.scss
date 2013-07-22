@@ -2,22 +2,28 @@
 @import 'css/main';
 
 /* VARIABLES */
-$blue-light: lightblue;
+$blue-light: #FF0000;
 $margin: 5px;
 
 /* MIXINS */
-/*
+
 @mixin border-radius($radius: 20px) {
 -webkit-border-radius: $radius;
 -moz-border-radius: $radius;
 -ms-border-radius: $radius;
 border-radius: $radius;
 }
-*/
+
+input[type=button] {
+	@include border-radius(+40px);
+	&:hover{background:red;}
+
+}
+
 
 /* THE REST IS UP TO YOU */
 
-/*.container {
+.container {
 	width:100%;
 	margin:0px auto;
 	@media screen and (min-width: 600px) {
@@ -25,14 +31,7 @@ border-radius: $radius;
 	    font-size:120%;
 	}
 }
-*/
 
-/*
-input[type=button] {
-	@include border-radius;
-	&:hover{background:$blue-light;}
-}
-*/
 
 h1 {color:$blue-light;}
 

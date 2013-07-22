@@ -76,19 +76,23 @@ _EXAMPLE (CSS3):_
 
 _EXAMPLE (SCSS):_
 
-		.container {
+		 .container {
+				width:100%;
+				margin:0px auto;
+				@media screen and (min-width: 600px) {
+				    width:60%;
+				    font-size:120%;
+				}
 		     header {
-		          ul {
-		             li {
-		               a {}
-		               :hover {}
-		               &:after {}
-		               &:before {}
-		               &:first-child {}
-		          }
-		     }
-		 @media (min-width: 1024px); { width:60%; } or @media (min-width: break-large) { width: 60%; }
-		 }
+          ul {
+             li {
+               a {}
+               :hover {}
+               &:after {}
+               &:before {}
+               &:first-child {}
+          }
+			}
 
 ###mixins
 _STRUCTURE:_
@@ -154,3 +158,4 @@ http://compass-style.org/
 - http://thesassway.com/
 - http://www.youtube.com/watch?v=fbVD32w1oTo
 - https://medium.com/what-i-learned-building/b4daab987fb0
+- http://www.codeschool.com/paths/html-css#sass
