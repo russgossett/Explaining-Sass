@@ -2,7 +2,7 @@
 #####It's all about style, right?
 How do we get the code that we spend all this time strategizing, fussing, tweaking, testing, iterating, building to look good? Bootstrap? Foundation? Divshot? 
 
-We all want the code we write to look good…fast! and we want it to be easy to write. _Enter Sass_.
+We all want the code we write to look good and easy to write. Enter _Sass_.
 
 
 ##What is it?
@@ -15,7 +15,7 @@ http://sass-lang.com
 
 ##Why is it so awesome?
 - It makes CSS fun again
-- Object Oriented CSS (OOCSS)
+- Unlock [Object Oriented CSS (OOCSS)](http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/ "OOCSS")
 - Great for rapid prototyping
 
 ## How do we get it running?
@@ -23,20 +23,20 @@ Install it using the ruby gem…
 
 _SASS_: 
           
-		$gem install sass
+		$ gem install sass
 		navigate to your project folder
-		$scss --watch file_name.scss:file_name.css
+		$ scss --watch file_name.scss:file_name.css
 		
 this also works
 
-		$sass --watch scss_folder:css_folder
+		$ sass --watch scss_folder:css_folder
 
 _COMPASS_:  
   
-		$sudo gem install compass
+		$ sudo gem install compass
 		navigate to your project folder
-		$compass create sass_folder_name
-		$compass watch sass_folder_name
+		$ compass create sass_folder_name
+		$ compass watch sass_folder_name
 
 Compass Plug: When created for a project, it creates a config.rb file so you can edit how sass spits out css (nested, compressed, etc.)
 
