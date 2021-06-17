@@ -98,9 +98,9 @@ _EXAMPLE (SCSS):_
 _STRUCTURE:_
 
     @mixin name_of_mixin(argument variable: default argument) {}
-    @inclue name_of_mixin;
+    @include name_of_mixin;
     
-Let's create a mixing for those unruly vendor pre-fixes and border radius.
+Let's create a mixin for those unruly vendor pre-fixes and border radius.
 
 _EXAMPLE:_
 
